@@ -60,6 +60,20 @@ button:hover {
     flex-wrap: wrap;
 }
 
+.span-top {
+    display: flex;
+    justify-content: center;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.span-bot {
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
 #btn-reload {
     position: fixed;
     bottom: 1%;
