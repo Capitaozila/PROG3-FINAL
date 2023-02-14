@@ -17,16 +17,18 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    margin: 15px;
+    margin-left: 10px;
 }
 
 button {
-    height: 100px;
+    height: 40px;
     width: 200px;
-    background-color: #232323;
-    color: aliceblue;
+    border-radius: 100px;
+    background-color: aliceblue;
+    color: black;
+    text-shadow: 1px 1px white;
     font-family: "Bungee", cursive;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -37,13 +39,19 @@ button {
     display: flex;
     justify-content: center;
     align-items: top;
+    background-color: red;
 }
 
 .imagens {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#reload {
+    top: 30px;
+    left: 30px;
 }
