@@ -17,7 +17,12 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    margin-left: 10px;
+    margin: 10px 10px;
+    border-radius: 150px;
+}
+
+p {
+    position: relative;
 }
 
 button {
@@ -32,6 +37,11 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    color: rgb(145, 18, 152);
+    transition: 0.5s ease;
+}
+
 .container {
     color: aliceblue;
     width: 100%;
@@ -39,7 +49,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: top;
-    background-color: red;
 }
 
 .imagens {
@@ -52,6 +61,6 @@ button {
 }
 
 #reload {
-    top: 30px;
-    left: 30px;
+    position: fixed;
+    bottom: 1%;
 }
