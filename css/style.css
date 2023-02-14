@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+    background-color: #232323;
+    font-family: "Bungee", cursive;
+    width: 100%;
+    height: 90vh;
+}
+
 img {
     width: 200px;
     height: 200px;
@@ -13,11 +20,14 @@ img {
     margin: 15px;
 }
 
-body {
+button {
+    height: 100px;
+    width: 200px;
     background-color: #232323;
+    color: aliceblue;
     font-family: "Bungee", cursive;
-    width: 100%;
-    height: 90vh;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .container {
@@ -27,7 +37,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: top;
-    background-color: red;
 }
 
 .imagens {
