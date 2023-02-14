@@ -60,7 +60,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
-#reload {
+#btn-reload {
     position: fixed;
     bottom: 1%;
 }
