@@ -10,7 +10,7 @@ function gerarDatas() {
   datas.forEach(function (data) {
     sendApiRequest(data);
   });
-  console.log(datas);
+  // console.log(datas);
 }
 function gerarDataAleatoria(start, end) {
   var d = new Date(
@@ -38,7 +38,7 @@ async function sendApiRequest(date) {
 
 const row = document.querySelector(".row");
 function useApiData(data) {
-  console.log(data);
+  // console.log(data);
   let url = "";
   if (data.media_type == "video") {
     url = "https://apod.nasa.gov/apod/calendar/S_220201.jpg";
@@ -68,11 +68,26 @@ function useApiData(data) {
   column.addEventListener("click", function () {
     const date = this.querySelector("#date").textContent;
 
-    console.log(date);
+    // console.log(date);
   });
 }
 
 let btnReiniciar = document.querySelector("#btn-reload");
 btnReiniciar.addEventListener("click", function () {
   location.reload();
+});
+
+// modal close
+
+const modal = document.getElementById("modal");
+const closeModalButton = document.querySelector(".close");
+
+closeModalButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 });
