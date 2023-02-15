@@ -6,11 +6,18 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #232323;
-  font-family: "Bungee", cursive;
   width: 100%;
   height: 90vh;
+  background-color: #232323;
+  font-family: "Bungee", cursive;
+  font-size: 15px;
+  color: white;
+  text-indent: 20px;
 }
 
 img {
@@ -34,6 +41,7 @@ button {
   text-shadow: 1px 1px white;
   font-family: "Bungee", cursive;
   font-size: 15px;
+  margin-left: 50px;
   cursor: pointer;
 }
 
@@ -42,39 +50,54 @@ button:hover {
   transition: 0.5s ease;
 }
 
-.container {
-  color: aliceblue;
+.navegation {
   width: 100%;
-  height: 100vh;
+  height: 100px;
   display: flex;
   justify-content: center;
-  align-items: top;
-}
-
-.imagens {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-.span-top {
-  display: flex;
-  justify-content: center;
-  margin-right: 80px;
-  margin-left: 80px;
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
 }
 
-.span-bot {
-  display: flex;
-  justify-content: center;
-  margin-left: 80px;
-  margin-right: 80px;
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
 }
 
-#btn-reload {
-  position: fixed;
-  bottom: 1%;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #232323;
+}
+.card-inicio {
+  border-radius: 50px 50px 0 0;
+}
+
+.card-fim {
+  border-radius: 0 0 50px 50px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

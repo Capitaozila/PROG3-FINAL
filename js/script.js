@@ -49,8 +49,8 @@ async function sendApiRequest(date) {
 
 function useApiData(data) {
   document.querySelector("#content").innerHTML += `<img src="${data.url}">`;
-  document.querySelector("#content").innerHTML += data.title;
-  document.querySelector("#content").innerHTML += data.date;
+  // document.querySelector("#content").innerHTML += data.title;
+  // document.querySelector("#content").innerHTML += data.date;
 }
 
 let btnReiniciar = document.querySelector("#btn-reload");
