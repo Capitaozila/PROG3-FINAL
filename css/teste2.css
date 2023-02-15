@@ -61,3 +61,9 @@ button:hover {
     height: 300px;
     width: 300px;
 }
+
+#btn-reload {
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+}
