@@ -54,8 +54,8 @@ function useApiData(data) {
         <img id="myBtn" src="${url}" alt="${data.title}">
      
       <div class="title">
-        <h3>Name</h3>
-        <h3>${data.title}</h3>
+        <h3>Title</h3>
+        <h3>" ${data.title} "</h3>
       </div>
       <div class="date">
         <h4>Date</h4>
