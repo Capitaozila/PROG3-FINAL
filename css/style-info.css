@@ -7,41 +7,41 @@
 }
 
 body {
-    background-color: #232323;
-    font-family: "Bungee", cursive;
-    width: 100%;
-    height: 100vh;
+  background-color: #232323;
+  font-family: "Bungee", cursive;
+  width: 100%;
+  height: 100vh;
 }
 
 img {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
 }
 
 .container {
-    color: aliceblue;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: top;
+  color: aliceblue;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
 }
 
 .imagem {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: top;
-    flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
 }
 
 .span {
-    width: 100%;
-    height: 40%;
-    position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 0 0 0 30px;
+  width: 100%;
+  height: 40%;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 0 30px;
 }
