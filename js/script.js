@@ -50,7 +50,7 @@ function useApiData(data) {
   column.classList.add("column");
 
   column.innerHTML = `
-    <div class="card" onclick="abreModal()">
+    <div class="card" onclick="abreModal(this)">
         <img id="myBtn" src="${url}" alt="${data.title}">
      
       <div class="title">
@@ -68,8 +68,57 @@ function useApiData(data) {
   column.addEventListener("click", function () {
     const date = this.querySelector("#date").textContent;
 
-    // console.log(date);
+    console.log(date);
+    buscarInformacoesImg(date);
   });
+}
+
+//função preenche o modal
+function buscarInformacoesImg(date) {
+  var req = new XMLHttpRequest();
+  // const dateTime = '2015-04-21';
+  const dateTime = date;
+  // console.log(date)
+  var url = `https://api.nasa.gov/planetary/apod?api_key=5B6oJsSCQyekXZvNOKpsUhRPl1e7FHqjIAyHpybk&date=${dateTime}`;
+
+  req.open("GET", url);
+  req.send();
+
+  req.addEventListener("load", function () {
+    if (req.status == 200 && req.readyState == 4) {
+      var response = JSON.parse(req.responseText);
+      colocarInformacoesNoModal(response);
+    }
+  });
+}
+
+function clearFields() {
+  document.getElementById("modal-img").src = "";
+  document.getElementById("info-title").textContent = "";
+  document.getElementById("info-date").textContent = "";
+  document.getElementById("info-explanation").textContent = "";
+  document.getElementById("info-copyright").textContent = "";
+}
+
+function colocarInformacoesNoModal(response) {
+  console.log(response);
+  let url = "";
+  if (response.media_type == "video") {
+    url = response.url;
+    document.getElementById("modal-img").style.display = "none";
+    document.getElementById("video").src = url;
+  } else {
+    url = response.hdurl;
+    document.getElementById("video").style.display = "none";
+    document.getElementById("modal-img").src = url;
+  }
+
+  document.getElementById("info-title").textContent = response.title;
+  document.getElementById("info-date").textContent = response.date;
+  document.getElementById("info-explanation").textContent =
+    response.explanation;
+  document.getElementById("info-copyright").textContent =
+    response.copyright ?? "Copyright não fornecido pela API";
 }
 
 let btnReiniciar = document.querySelector("#btn-reload");
@@ -88,10 +137,12 @@ function abreModal() {
 
 closeModalButton.addEventListener("click", () => {
   modal.style.display = "none";
+  clearFields();
 });
 
 window.addEventListener("click", (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
+    clearFields();
   }
 });
