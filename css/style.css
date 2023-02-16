@@ -26,12 +26,13 @@ h2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 15px;
   color: black;
   text-indent: 0px;
   font-size: 20px;
 }
 
-p {
+span {
   margin-top: 0px;
   margin-left: 30px;
 }
@@ -131,8 +132,6 @@ button:hover {
   padding: 20px;
   border: 1px solid #888;
   width: 95%;
-  height: 95%;
-  max-height: 100%;
   position: absolute;
   left: 0;
   right: 0;
@@ -169,6 +168,11 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
+  span,
+  h2 {
+    font-size: 10px;
+  }
+
   .column {
     width: 100%;
     display: block;
@@ -187,7 +191,6 @@ button:hover {
   }
 }
 
-
 @media screen and (min-width: 600px) {
   .column {
     width: 50%;
@@ -200,5 +203,9 @@ button:hover {
   img {
     width: 300px;
     height: 300px;
+  }
+
+  .modal-content {
+    height: 95%;
   }
 }

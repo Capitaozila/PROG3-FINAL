@@ -68,7 +68,7 @@ function useApiData(data) {
   column.addEventListener("click", function () {
     const date = this.querySelector("#date").textContent;
 
-    console.log(date);
+    // console.log(date);
     buscarInformacoesImg(date);
   });
 }
@@ -101,7 +101,7 @@ function clearFields() {
 }
 
 function colocarInformacoesNoModal(response) {
-  console.log(response);
+  // console.log(response);
   let url = "";
   if (response.media_type == "video") {
     url = response.url;
