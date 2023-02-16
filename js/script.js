@@ -50,7 +50,7 @@ function useApiData(data) {
   column.classList.add("column");
 
   column.innerHTML = `
-    <div class="card">
+    <div class="card" onclick="abreModal()">
         <img id="myBtn" src="${url}" alt="${data.title}">
      
       <div class="title">
@@ -81,6 +81,10 @@ btnReiniciar.addEventListener("click", function () {
 
 const modal = document.getElementById("modal");
 const closeModalButton = document.querySelector(".close");
+
+function abreModal() {
+  modal.style.display = "block";
+}
 
 closeModalButton.addEventListener("click", () => {
   modal.style.display = "none";

@@ -97,6 +97,7 @@ button:hover {
   background-color: #fefefe;
   color: #232323;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .title {
