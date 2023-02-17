@@ -1,3 +1,5 @@
+// feito por Luis Henrique Sousa Brasil
+
 window.addEventListener("load", gerarDatas);
 
 function gerarDatas() {
@@ -144,3 +146,5 @@ window.addEventListener("click", (event) => {
     clearFields();
   }
 });
+
+// feito por Luis Henrique Sousa Brasil
