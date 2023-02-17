@@ -8,7 +8,7 @@ function gerarDatas() {
   }
 
   datas.forEach(function (data) {
-    sendApiRequest(data);
+    enviarApiRequest(data);
   });
   // console.log(datas);
 }
@@ -26,7 +26,7 @@ function gerarDataAleatoria(start, end) {
   return [year, month, day].join("-");
 }
 
-async function sendApiRequest(date) {
+async function enviarApiRequest(date) {
   let API_KEY = "AswWGpGZ2t1gxVraiqmeC7P3DfOaZiHQnqJyiyUV";
   let response = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`
@@ -73,12 +73,10 @@ function useApiData(data) {
   });
 }
 
-//função preenche o modal
+//funções para preenche o modal aberto com as informações da imagem e data selecionada
 function buscarInformacoesImg(date) {
   var req = new XMLHttpRequest();
-  // const dateTime = '2015-04-21';
   const dateTime = date;
-  // console.log(date)
   var url = `https://api.nasa.gov/planetary/apod?api_key=5B6oJsSCQyekXZvNOKpsUhRPl1e7FHqjIAyHpybk&date=${dateTime}`;
 
   req.open("GET", url);
@@ -126,7 +124,7 @@ btnReiniciar.addEventListener("click", function () {
   location.reload();
 });
 
-// modal close
+// modal close and open
 
 const modal = document.getElementById("modal");
 const closeModalButton = document.querySelector(".close");
